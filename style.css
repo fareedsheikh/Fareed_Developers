@@ -1,0 +1,2373 @@
+/* ------------------------------------Fonts Import------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+/* ------------------------------------Universal------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000000;
+    --secondary-color: #36454F;
+    --white-color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-rendering: geometricPrecision;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+h2 {
+    text-rendering: geometricPrecision;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+h3 {
+    text-rendering: geometricPrecision;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+h4 {
+    text-rendering: geometricPrecision;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    color: #fff;
+    visibility: inherit;
+    font-weight: 300;
+    font-family: "sani Trixie sans";
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    /* display: none; */
+}
+
+._container {
+    width: 100%;
+    height: auto;
+    /* display: none; */
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+.animation {
+    transform: translateY(10%);
+}
+
+
+/* ------------------------------------------------Hero---------------------------------------------- */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9;
+}
+
+nav .nav_left {
+    width: 10%;
+    display: flex;
+}
+
+nav .nav_right {
+    width: 75%;
+    display: flex;
+    justify-content: right;
+    margin-right: 3%;
+    position: relative;
+}
+
+#links span {
+    font-family: "Mulish", sans-serif;
+    font-size: 40px;
+    margin: 0 40px;
+}
+
+#links a {
+    color: var(--primary-color);
+}
+
+#links a i {
+    font-size: 40px;
+    margin: 0 17px;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+#links a i:hover {
+    color: var(--secondary-color)!important;
+}
+
+#links .hamburger {
+    cursor: pointer;
+    font-size: 40px;
+    position: fixed;
+    top: 4.8%;
+    left: 96%;
+}
+
+#logo img {
+    width: 100px;
+    position: absolute;
+    /* Ensure it overlaps with the dark logo */
+    top: 12%;
+    left: 3%;
+    transition: opacity 0.3s ease;
+}
+
+#logo img.white_logo {
+    opacity: 0;
+    position: absolute;
+    /* Ensure it overlaps with the dark logo */
+    top: 12%;
+    left: 3%;
+}
+
+#logo img.dark_logo {
+    opacity: 1;
+}
+
+#hero_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#hero_bg .overlay {
+    background-color: #0000001a;
+}
+
+#hero_bg .transitioned {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000000a;
+}
+
+#hero_bg video {
+    height: 100vh;
+    color: var(--primary-color);
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero_content {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 0 6vw;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero_content span {
+    font-size: 100px;
+    line-height: 150px;
+    color: var(--primary-color);
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.hero_content p {
+    font-size: 45px;
+    line-height: 42px;
+    color: var(--secondary-color);
+    font-family: "Mulish", sans-serif;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn a {
+    display: flex;
+    font-size: 36px;
+    font-family: "Dosis", sans-serif;
+    padding: 7px 30px;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 6px;
+    margin: 40px 20px;
+    transition: .6s;
+}
+
+.btn a:hover {
+    box-shadow: inset 250px 0px 0px 0px var(--secondary-color);
+    color: var(--white-color);
+    border: none;
+}
+
+.scroller {
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    animation: right_to_left 24s infinite linear;
+    position: absolute;
+    top: 82%;
+}
+
+.scroller p {
+    font-size: 90px;
+    line-height: 355px;
+    font-family: "Arsenal SC", sans-serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #98FF98;
+    color: var(--secondary-color);
+}
+
+#location {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+}
+
+.my_location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    width: 360px;
+    height: 100px;
+    background: var(--secondary-color);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.my_location span {
+    color: var(--white-color);
+    font-size: 35px;
+    line-height: 40px;
+    margin: 0 13px;
+    font-family: "Dosis", sans-serif;
+}
+
+.my_location i {
+    margin-left: 25px;
+    font-size: 35px;
+    color: var(--white-color);
+}
+
+@keyframes right_to_left {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#chat_box {
+    height: 100vh;
+    background: var(--white-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.chat {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_text_box {
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.chat_text_box div {
+    padding: 18px 50px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 5px solid var(--white-color);
+    background: #0000007a;
+    font-family: "Mulish", sans-serif;
+}
+
+.chat_text_box div p {
+    color: var(--white-color);
+    font-size: 40px;
+}
+
+.chat_text_box .chat_text1 {
+    will-change: transform;
+    transform: translate3d(-151.19px, -0.88923px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-15.5563deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.chat_text_box .chat_text2 {
+    will-change: transform;
+    transform: translate3d(185.413px, -46.3603px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(8.06756deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.chat_text_box .chat_text3 {
+    will-change: transform;
+    transform: translate3d(-196.671px, 22.6817px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-9.33597deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.chat_text_box .chat_text4 {
+    will-change: transform;
+    transform: translate3d(288.06px, -44.4857px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.chat_text_box .chat_text5 {
+    will-change: transform;
+    transform: translate3d(50.0663px, 22.6817px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-0.86488deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+
+.chat span {
+    width: 30%;
+    font-size: 100px;
+    line-height: 180px;
+    color: #000000;
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    -webkit-text-stroke: 1px #ffffff65;
+}
+
+#about_us {
+    font-family: "gza";
+    background: var(--primary-color);
+}
+
+
+/* #about_us .container {
+    height: auto;
+} */
+
+.heading {
+    margin: 0px 40px;
+    line-height: 150px;
+    font-size: 180px;
+    color: var(--white-color);
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.white {
+    color: var(--primary-color);
+    margin: 0px 40px;
+    padding-top: 10px;
+    font-size: 200px;
+    margin-top: 60px;
+    color: var(--white-color);
+}
+
+.about_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+
+.about_content p {
+    font-size: 40px;
+    line-height: 70px;
+    margin: 10px 40px;
+    color: var(--white-color);
+    font-family: "Mulish", sans-serif;
+}
+
+.about_left {
+    width: 54%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+    border-right: 3px solid var(--primary-color);
+}
+
+.about_right {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 70px;
+}
+
+.about_left .about_p_2 {
+    padding-top: 50px;
+}
+
+.about_left .about_p_1 {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 50px;
+}
+
+.about_btn {
+    justify-content: left;
+    margin: 10px 40px;
+}
+
+#Case_Studies {
+    width: 100%;
+    background: var(--white-color);
+}
+
+.case_content {
+    width: 100%;
+    display: flex;
+}
+
+.case_links {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slide_case_first a img {
+    width: 630px;
+    box-shadow: 0px 0px 70px -30px rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    transition: 0.6s all;
+}
+
+.slide_case_first a {
+    margin: 0 60px;
+}
+
+.slide_case_first {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5vw 0px;
+    transform: translateX(10%);
+}
+
+.slide_case_second {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5cqmin 0px;
+    transform: translateX(-10%);
+}
+
+.slide_case_second a img {
+    width: 630px;
+    box-shadow: 0px 0px 70px -30px rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    transition: 0.6s all;
+}
+
+.slide_case_first a img:hover {
+    box-shadow: 0px 0px 70px -25px rgb(135, 135, 135);
+    transform: scale(1.1, 1.1);
+}
+
+.slide_case_second a img:hover {
+    box-shadow: 0px 0px 70px -25px rgb(135, 135, 135);
+    transform: scale(1.1, 1.1);
+}
+
+.slide_case_second a {
+    margin: 0 60px;
+}
+
+#portfolio {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.port_colum_1 {
+    display: flex;
+    width: 100%;
+}
+
+.port_colum_2 {
+    display: flex;
+    width: 100%;
+}
+
+.portfolios {
+    margin: 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4vw;
+}
+
+.portfolios a {
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 40px;
+    border-radius: 10px;
+    border-top: 8px solid var(--secondary-color);
+    transition: .8s all;
+    border-bottom: 3px solid #00000065;
+    border-right: 3px solid #00000028;
+    border-left: 3px solid #00000028;
+}
+
+.portfolios a:hover {
+    box-shadow: inset 0 950px 0 0px #36454f66;
+    border-bottom: 3px solid #000000a1;
+    border-radius: 10px;
+    border-top: 8px solid var(--secondary-color);
+}
+
+.portfolios a:hover .port_heading span {
+    color: var(--secondary-color);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #969696;
+}
+
+.portfolios .port_heading {
+    margin: 30px 0;
+}
+
+.portfolios .port_heading span {
+    font-size: 47px;
+    color: var(--secondary-color);
+    margin: 10px 0;
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.portfolios .port_para p {
+    font-family: "Mulish", sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+    padding: 0 20px;
+    font-size: 30px;
+    line-height: 60px;
+    color: var(--primary-color);
+}
+
+.portfolios a .port_img img {
+    width: 300px;
+    height: 300px;
+}
+
+#client {
+    background: var(--white-color);
+}
+
+.testimonials {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6vw;
+    margin: 30px 0;
+}
+
+.testimonial {
+    width: 500px;
+    height: 840px;
+    margin: 0 70px;
+    border-radius: 6px;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.testimonial:hover .test_para {
+    z-index: 2;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.testimonial:hover .test_img img {
+    opacity: .3;
+}
+
+.testimonial:hover .test_name_pro {
+    left: 4%;
+    /* top: 60%; */
+    text-align: left;
+}
+
+.testimonial .test_para {
+    transform: translateY(-340px);
+    position: absolute;
+    z-index: -1;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    transition: .8s all;
+    opacity: 0;
+}
+
+.testimonial .test_para p {
+    font-size: 27px;
+    line-height: 51px;
+    margin-top: 16px;
+    color: var(--white-color);
+    opacity: 1;
+    font-family: "Dosis", sans-serif;
+}
+
+.testimonial .test_name_pro {
+    position: absolute;
+    z-index: 1;
+    top: 88%;
+    left: 30%;
+    text-align: center;
+    border-bottom: 2px solid var(--white-color);
+    transition: .7s all;
+}
+
+.testimonial .test_name_pro .test_name span {
+    color: var(--white-color);
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 40px;
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.testimonial .test_name_pro .test_profession span {
+    color: #cccccc;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 500;
+    font-family: "Mulish", sans-serif;
+}
+
+.testimonial .test_img img {
+    position: absolute;
+    /* z-index: -1; */
+}
+
+.testimonial .test_img img {
+    transition: .6s all;
+    opacity: .8;
+    border-radius: 6px;
+    object-fit: cover;
+    width: 500px;
+    height: 840px;
+    transform: .9s all;
+    object-fit: cover;
+}
+
+.call_to_action_c {
+    height: 60vh;
+}
+
+#call_to_action .banner {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background: #000000;
+}
+
+.baner_video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 60vh;
+    width: 100%;
+}
+
+.baner_video video {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_logo span {
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 100px;
+    color: var(--white-color);
+    font-family: "Arsenal SC", sans-serif;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan span {
+    font-size: 40px;
+    line-height: 55px;
+    color: var(--secondary-color);
+    font-family: "Mulish", sans-serif;
+}
+
+.slogan p {
+    font-size: 35px;
+    line-height: 44px;
+    color: var(--secondary-color);
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    width: 55%;
+}
+
+.cta_btn a {
+    display: flex;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: "Dosis", sans-serif;
+    padding: 7px 30px;
+    color: var(--secondary-color);
+    border: none;
+    margin: 30px 10px;
+    font-weight: 600;
+    opacity: .9;
+}
+
+.cta_btn a:hover {
+    opacity: 1;
+    box-shadow: inset 0px 0px 0px 0px var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.cta_btn a:hover i {
+    color: #000;
+    margin-left: 26px;
+}
+
+.cta_btn a i {
+    font-size: 36px;
+    margin-left: 20px;
+    line-height: 48px;
+}
+
+#contact {
+    background: var(--white-color);
+}
+
+.contact_info_content {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    padding: 0 3vw;
+}
+
+.contact_information {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact_information p {
+    font-size: 30px;
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    margin: 19px 0;
+    color: var(--secondary-color);
+}
+
+.contact_info {
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.contact_info li {
+    list-style: none;
+    font-size: 40px;
+    font-family: "Dosis", sans-serif;
+    color: var(--white-color);
+    margin: 55px 0;
+    margin-left: 50px;
+}
+
+.contact_info li i {
+    margin-right: 70px;
+}
+
+.contact_links {
+    display: flex;
+    padding: 55px 0;
+    margin-left: -18px;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.contact_links a {
+    padding: 30px;
+    background: rgb(27, 27, 27);
+    border-radius: 50px;
+    margin: 0 25px;
+    border: 4px solid #1b1b1b;
+    transition: .5s all;
+}
+
+.contact_links a:hover {
+    box-shadow: inset 0px 0px 0px 90px var(--white-color);
+    border: 4px solid #1b1b1b;
+}
+
+.contact_links a:hover i {
+    color: #000!important;
+}
+
+.contact_links a i {
+    font-size: 35px;
+}
+
+.contact_content {
+    width: 65%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.contact_content span {
+    font-size: 80px;
+    line-height: 100px;
+    font-family: "Arsenal SC", sans-serif;
+    color: var(--white-color);
+    width: 80%;
+    margin-top: -160px;
+}
+
+.contact_content span {
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: 600;
+    font-family: "Arsenal SC", sans-serif;
+    color: var(--secondary-color);
+    width: 80%;
+    margin-top: -230px;
+}
+
+.contact_content form {
+    width: 80%;
+    margin-top: 100px;
+}
+
+.contact_content .form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.contact_content .form-group label {
+    font-size: 35px;
+    color: var(--white-color);
+    position: absolute;
+    top: -25px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.contact_content .form-group input,
+.contact_content .form-group textarea {
+    width: 100%;
+    padding: 27px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--white-color);
+    color: #969696;
+    font-size: 30px;
+    transition: border-bottom-color 0.3s ease;
+}
+
+.contact_content .form-group input:focus,
+.contact_content .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: var(--secondary-color);
+}
+
+.contact_content .form-group input::placeholder,
+.contact_content .form-group textarea::placeholder {
+    color: var(--white-color);
+    opacity: 0.7;
+}
+
+.contact_content button {
+    width: 100%;
+    padding: 15px;
+    background-color: transparent;
+    border: 2px solid var(--white-color);
+    color: var(--white-color);
+    font-size: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact_content button:hover {
+    background-color: var(--secondary-color);
+    color: #000;
+}
+
+.contact_content .form-group input:focus~label,
+.contact_content .form-group textarea:focus~label,
+.contact_content .form-group input:not(:placeholder-shown)~label,
+.contact_content .form-group textarea:not(:placeholder-shown)~label {
+    top: -40px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+#whatsapp {
+    position: fixed;
+    top: 90%;
+    left: 96%;
+    display: none;
+}
+
+#whatsapp a i {
+    font-size: 80px;
+}
+
+.side_menu_wrap {
+    height: 100vh;
+    background: var(--secondary-color);
+    position: relative;
+    left: 3%;
+}
+
+.side_menu {
+    position: fixed;
+    top: 0%;
+    left: 55%;
+    right: -8%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #0099ff;
+    z-index: 999;
+    overflow: hidden;
+    display: none;
+}
+
+.side_menu_row {
+    width: 100%;
+    display: flex;
+    height: 145px;
+    align-items: center;
+    justify-content: left;
+}
+
+.side_menu_row span {
+    font-size: 40px;
+    margin: 0 50px;
+    color: var(--white-color);
+}
+
+.side_menu_row a i {
+    font-size: 40px;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: .3s all;
+    color: var(--white-color)!important;
+}
+
+.side_menu_row a i:hover {
+    color: #2a2a2a!important;
+}
+
+.side_menu_row .close {
+    cursor: pointer;
+    font-size: 55px;
+    position: fixed;
+    top: 5.5%;
+    left: 75%;
+}
+
+.side_menu_colomn {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+.side_menu_colomn a {
+    font-size: 70px;
+    margin-top: 80px;
+    color: var(--white-color);
+}
+
+.visible {
+    display: block;
+}
+
+.mainCss {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    /* Background color of your choice */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dotsCss {
+    display: flex;
+    gap: 50px;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    transform: translateY(-40px);
+}
+
+@media (max-width: 1920px) {
+    nav {
+        height: 119px;
+    }
+    #links .hamburger {
+        top: 5%;
+    }
+    .hero_content span {
+        font-size: 80px;
+        line-height: 130px;
+    }
+    .hero_content p {
+        font-size: 34px;
+        line-height: 14px;
+    }
+    .btn a {
+        font-size: 30px;
+        padding: 4px 20px;
+    }
+    .my_location {
+        width: 280px;
+        height: 70px;
+    }
+    .my_location span {
+        font-size: 27px;
+        line-height: 33px;
+    }
+    .my_location i {
+        margin-left: 25px;
+        font-size: 27px;
+    }
+    .scroller p {
+        font-size: 70px;
+        line-height: 242px;
+    }
+    #logo img {
+        width: 80px;
+    }
+    #links span {
+        font-size: 32px;
+        margin: 0 40px;
+    }
+    #links a i {
+        font-size: 32px;
+        margin: 0 10px;
+    }
+    #links .hamburger {
+        font-size: 32px;
+    }
+    .chat_text_box div p {
+        font-size: 30px;
+    }
+    .chat span {
+        font-size: 75px;
+        line-height: 140px;
+    }
+    .heading {
+        font-size: 130px;
+        line-height: 115px;
+    }
+    .about_content p {
+        font-size: 28px;
+        line-height: 43px;
+    }
+    .slide_case_first a img {
+        width: 460px;
+    }
+    .slide_case_second a img {
+        width: 460px;
+    }
+    .slide_case_first {
+        padding: 4vw 0px;
+    }
+    .slide_case_second {
+        padding: 4vw 0px;
+    }
+    .portfolios {
+        margin: 70px 0;
+    }
+    .portfolios .port_heading span {
+        font-size: 33px;
+        margin: 8px 0;
+    }
+    .portfolios .port_para p {
+        margin: 8px 0;
+        padding: 0 10px;
+        font-size: 23px;
+        line-height: 37px;
+    }
+    .portfolios a .port_img img {
+        width: 200px;
+        height: 200px;
+    }
+    .portfolios a {
+        width: 100%;
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 30px;
+        border-radius: 10px;
+        border-top: 8px solid #36454F;
+    }
+    .white {
+        margin: 0px 30px;
+        padding-top: 0px;
+        font-size: 130px;
+        margin-top: 0px;
+    }
+    .testimonials {
+        height: 80vh;
+        margin: 6px 0;
+    }
+    .testimonial {
+        width: 400px;
+        height: 600px;
+    }
+    .testimonial .test_img img {
+        width: 400px;
+        height: 600px;
+    }
+    .testimonial .test_para {
+        padding-right: 33px;
+    }
+    .testimonial .test_name_pro {
+        top: 89%;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    .testimonial .test_para p {
+        font-size: 22px;
+        line-height: 35px;
+        margin-top: 16px;
+    }
+    .banner_logo span {
+        font-size: 65px;
+        line-height: 80px;
+    }
+    .slogan p {
+        font-size: 31px;
+        line-height: 44px;
+    }
+    .cta_btn a i {
+        font-size: 27px;
+        margin-left: 18px;
+        line-height: 45px;
+    }
+    .contact_info li {
+        font-size: 30px;
+        margin: 40px 0;
+        margin-left: 22px;
+    }
+    .contact_info {
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .contact_links {
+        padding: 30px 0;
+        margin-left: -18px;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .contact_links a {
+        padding: 18px;
+        margin: 0 16px;
+    }
+    .contact_links a i {
+        font-size: 28px;
+    }
+    .contact_links a:hover {
+        box-shadow: inset 0px 0px 0px 50px var(--white-color);
+    }
+    .contact_information p {
+        font-size: 25px;
+    }
+    .contact_content span {
+        font-size: 60px;
+        line-height: 70px;
+        width: 80%;
+        margin-top: -145px;
+    }
+    .contact_content .form-group label {
+        font-size: 28px;
+    }
+    .contact_content .form-group input,
+    .contact_content .form-group textarea {
+        padding: 10px 0;
+        font-size: 26px;
+    }
+    .contact_content button {
+        padding: 8px;
+        font-size: 28px;
+    }
+    #whatsapp {
+        top: 90%;
+        left: 96%;
+    }
+    #whatsapp a i {
+        font-size: 68px;
+    }
+}
+
+@media (max-width: 1600px) {
+    nav {
+        height: 110px;
+    }
+    nav .nav_right {
+        align-items: center;
+    }
+    #logo img {
+        width: 50px;
+    }
+    #links span {
+        font-size: 25px;
+    }
+    #links a i {
+        font-size: 26px;
+        margin: 0 10px;
+    }
+    #links .hamburger {
+        font-size: 26px;
+        top: 6%;
+    }
+    .hero_content span {
+        font-size: 58px;
+        line-height: 72px;
+    }
+    .hero_content p {
+        font-size: 24px;
+        line-height: 22px;
+    }
+    .btn {
+        margin-top: -18px;
+    }
+    .btn a {
+        font-size: 20px;
+        margin: 40px 10px;
+        padding: 4px 15px;
+        border: 1px solid #000;
+    }
+    .my_location {
+        width: 200px;
+        height: 48px;
+    }
+    .my_location span {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 23px;
+    }
+    .my_location i {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+    .scroller p {
+        font-size: 50px;
+        line-height: 208px;
+    }
+    .chat_text_box div p {
+        font-size: 20px;
+    }
+    .chat span {
+        font-size: 45px;
+        line-height: 140px;
+        -webkit-text-stroke: .6px #ffffff65;
+    }
+    .heading {
+        font-size: 90px;
+        line-height: 90px;
+    }
+    .about_left {
+        padding: 0 50px;
+    }
+    .about_right {
+        padding: 0 50px;
+    }
+    .about_content {
+        margin-top: 42px;
+    }
+    .about_content p {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .slide_case_first a img {
+        width: 350px;
+    }
+    .slide_case_second a img {
+        width: 350px;
+    }
+    .slide_case_first {
+        padding: 4vw 0px;
+    }
+    .slide_case_second {
+        padding: 4vw 0px;
+    }
+    .portfolios .port_heading {
+        margin: 12px 0;
+    }
+    .portfolios .port_heading span {
+        font-size: 26px;
+        margin: 8px 0;
+    }
+    .portfolios a:hover .port_heading span {
+        color: #36454F;
+        -webkit-text-stroke-width: .3px;
+    }
+    .portfolios .port_para p {
+        font-size: 18px;
+        line-height: 32px;
+        margin: 43px 0;
+        padding: 0 10px;
+    }
+    .portfolios a .port_img img {
+        width: 180px;
+        height: 180px;
+    }
+    .portfolios {
+        margin: 50px 0;
+    }
+    .portfolios a {
+        width: 100%;
+        height: 550px;
+        margin: 0 25px;
+        border-radius: 10px;
+        border-top: 8px solid #36454F;
+        transition: .8s all;
+        border-top: 5px solid var(--secondary-color);
+        border-bottom: 1px solid #00000070;
+        border-right: 1px solid #0000004f;
+        border-left: 1px solid #0000004f;
+    }
+    .white {
+        font-size: 90px;
+    }
+    .testimonial {
+        width: 330px;
+        height: 500px;
+    }
+    .testimonial .test_img img {
+        width: 330px;
+        height: 500px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .testimonial .test_para {
+        padding-right: 22px;
+    }
+    .testimonial .test_para p {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 6px;
+    }
+    .banner_logo span {
+        font-size: 55px;
+        line-height: 65px;
+    }
+    .slogan p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .cta_btn a {
+        font-size: 20px;
+        line-height: 30px;
+        padding: 4px 20px;
+        border: none;
+        margin: 30px 10px;
+        font-weight: 600;
+        opacity: .9;
+    }
+    .cta_btn a i {
+        font-size: 20px;
+        margin-left: 16px;
+        line-height: 35px;
+    }
+    .contact_info li {
+        font-size: 23px;
+        margin: 32px 0;
+        margin-left: 16px;
+    }
+    .contact_links {
+        padding: 23px 0;
+        margin-left: -1px;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .contact_links a {
+        padding: 14px;
+        margin: 0 15px;
+    }
+    .contact_links a i {
+        font-size: 20px;
+    }
+    .contact_information p {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .contact_content span {
+        font-size: 40px;
+        line-height: 50px;
+        width: 80%;
+        margin-top: -90px;
+    }
+    .contact_content .form-group label {
+        font-size: 22px;
+    }
+    .contact_content .form-group input,
+    .contact_content .form-group textarea {
+        padding: 6px 0;
+        font-size: 18px;
+    }
+    .contact_content button {
+        padding: 6px;
+        font-size: 20px;
+    }
+    #whatsapp a i {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1440px) {
+    nav {
+        height: 88px;
+    }
+    #links .hamburger {
+        top: 5%;
+    }
+    .heading {
+        font-size: 80px;
+        line-height: 70px;
+    }
+    .scroller p {
+        font-size: 42px;
+        line-height: 194px;
+    }
+    .chat span {
+        font-size: 40px;
+        line-height: 125px;
+        -webkit-text-stroke: .6px #ffffff65;
+    }
+    .about_left {
+        padding: 0 30px;
+    }
+    .about_right {
+        padding: 0px 30px;
+    }
+    .about_content p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .about_left .about_p_2 {
+        padding-top: 18px;
+    }
+    .portfolios .port_heading span {
+        font-size: 24px;
+        margin: 0px 0;
+    }
+    .portfolios .port_para p {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .portfolios a .port_img img {
+        width: 160px;
+        height: 160px;
+    }
+    .white {
+        font-size: 80px;
+    }
+    .testimonial {
+        width: 300px;
+        height: 430px;
+    }
+    .testimonial .test_img img {
+        width: 300px;
+        height: 430px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .testimonial .test_para {
+        padding: 0 16px;
+        padding-right: 3px;
+    }
+    .testimonial .test_para p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 6px;
+    }
+    .testimonial .test_name_pro {
+        top: 90%;
+    }
+    .contact_info_content {
+        height: 76vh;
+    }
+    .contact_content .form-group label {
+        font-size: 20px;
+    }
+    .contact_content .form-group input,
+    .contact_content .form-group textarea {
+        padding: 6px 0;
+        font-size: 16px;
+    }
+    .contact_content form {
+        margin-top: 75px;
+    }
+    .contact_links a {
+        padding: 12px;
+        margin: 0 14px;
+    }
+    #whatsapp a i {
+        font-size: 53px;
+    }
+    #whatsapp {
+        top: 91%;
+        left: 96%;
+    }
+}
+
+@media (max-width: 1366px) {
+    nav {
+        height: 80px;
+    }
+    #logo img {
+        width: 43px;
+    }
+    #links span {
+        font-size: 20px;
+    }
+    #links a i {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+    #links .hamburger {
+        font-size: 20px;
+        top: 5%;
+    }
+    .hero_content span {
+        font-size: 50px;
+        line-height: 63px;
+    }
+    .hero_content p {
+        font-size: 24px;
+        line-height: 27px;
+    }
+    .scroller p {
+        font-size: 47px;
+        line-height: 176px;
+    }
+    .btn {
+        margin-top: -18px;
+        display: flex;
+    }
+    .btn a {
+        font-size: 18px;
+        padding: 4px 12px;
+        border: 1px solid #000;
+    }
+    .my_location {
+        width: 166px;
+        height: 40px;
+    }
+    .my_location span {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+    .my_location i {
+        font-size: 17px;
+    }
+    .chat span {
+        font-size: 40px;
+        line-height: 120px;
+        -webkit-text-stroke: .6px #ffffff65;
+    }
+    .chat_text_box div {
+        padding: 12px 30px;
+        border: 2px solid #fff;
+    }
+    .chat_text_box div p {
+        font-size: 15px;
+    }
+    .about_content {
+        margin-top: 40px;
+    }
+    .about_content p {
+        font-size: 19px;
+        line-height: 35px;
+    }
+    .slide_case_first a img {
+        width: 320px;
+    }
+    .slide_case_second a img {
+        width: 320px;
+    }
+    .portfolios a {
+        height: 485px;
+    }
+    .portfolios a .port_img img {
+        width: 150px;
+        height: 150px;
+    }
+    .portfolios .port_heading span {
+        font-size: 22px;
+    }
+    .portfolios .port_para p {
+        font-size: 15px;
+        line-height: 28px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+    .testimonial {
+        width: 300px;
+        height: 440px;
+    }
+    .testimonial .test_img img {
+        width: 300px;
+        height: 440px;
+    }
+    .testimonial .test_para {
+        padding: 0 10px;
+        padding-right: 0px;
+    }
+    .banner_logo span {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .cta_btn a {
+        border: none;
+    }
+    .contact_content form {
+        margin-top: 70px;
+    }
+    .contact_links a {
+        padding: 11px;
+        margin: 0px 12px;
+    }
+    #whatsapp {
+        top: 90%;
+        left: 96%;
+    }
+    #whatsapp a i {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 1112px) {
+    .chat span {
+        font-size: 40px;
+        line-height: 120px;
+    }
+    .heading {
+        font-size: 70px;
+    }
+    .about_content {
+        margin-top: 18px;
+    }
+    .about_left {
+        padding: 0 22px;
+    }
+    .about_right {
+        padding: 0px 22px;
+    }
+    .about_content p {
+        font-size: 17px;
+        line-height: 31px;
+        /* margin: 7px 18px; */
+    }
+    .slide_case_first a img {
+        width: 300px;
+    }
+    .slide_case_second a img {
+        width: 300px;
+    }
+    .slide_case_first a {
+        margin: 0 30px;
+    }
+    .slide_case_second a {
+        margin: 0 30px;
+    }
+    .portfolios a .port_img img {
+        width: 120px;
+        height: 120px;
+    }
+    .portfolios .port_heading span {
+        font-size: 22px;
+    }
+    .portfolios .port_heading {
+        margin: 30px 0;
+    }
+    .portfolios .port_para p {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+    .portfolios a {
+        height: 480px;
+        margin: 0 17px;
+    }
+    .white {
+        font-size: 70px;
+    }
+    .testimonial {
+        width: 240px;
+        height: 430px;
+        margin: 0 40px;
+    }
+    .testimonial .test_img img {
+        width: 240px;
+        height: 430px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .testimonial .test_para p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 6px;
+    }
+    .banner_logo span {
+        font-size: 38px;
+        line-height: 45px;
+    }
+    .slogan p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .contact_content form {
+        margin-top: 100px;
+    }
+    .contact_info_content {
+        height: 68vh;
+    }
+    .contact_info li i {
+        margin-right: 30px;
+    }
+    .contact_links {
+        padding: 10px 0;
+        margin-left: -3px;
+        border-bottom: 2px solid var(--secondary-color);
+    }
+    .contact_links a {
+        padding: 9px;
+        margin: 4px 10px;
+    }
+    .contact_links a i {
+        font-size: 15px;
+    }
+    .contact_information p {
+        font-size: 14px;
+        margin: 6px 0;
+    }
+    .contact_content .form-group label {
+        font-size: 17px;
+    }
+    .contact_content .form-group input,
+    .contact_content .form-group textarea {
+        padding: 6px 0;
+        font-size: 11px;
+    }
+    .contact_content button {
+        padding: 3px;
+        font-size: 15px;
+    }
+    .contact_content span {
+        font-size: 31px;
+        line-height: 37px;
+        width: 80%;
+        margin-top: -74px;
+    }
+    #whatsapp a i {
+        font-size: 42px;
+    }
+    #whatsapp {
+        top: 91%;
+        left: 95%;
+    }
+}
+
+@media (max-width: 834px) {
+    nav .nav_right {
+        margin-right: 7%;
+    }
+    #links span {
+        font-size: 17px;
+        margin: 0 20px;
+    }
+    #links .hamburger {
+        left: 95%;
+    }
+    .hero_content span {
+        font-size: 46px;
+        line-height: 53px;
+    }
+    .hero_content p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .btn {
+        margin-top: -29px;
+        display: flex;
+    }
+    .my_location span {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+    .my_location {
+        width: 162px;
+        height: 36px;
+    }
+    .chat span {
+        width: 40%;
+        font-size: 40px;
+        line-height: 120px;
+    }
+    .scroller p {
+        font-size: 36px;
+        line-height: 184px;
+    }
+    .heading {
+        line-height: 65px;
+        margin: 0 33vw;
+        text-align: center;
+    }
+    .about_left {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        padding: 2vw 6vw;
+        border-right: 0px solid var(--primary-color);
+    }
+    .about_left .about_p_1 {
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 40px;
+    }
+    .about_right {
+        display: none;
+    }
+    .about_content p {
+        font-size: 22px;
+        line-height: 39px;
+        margin: 7px 18px;
+    }
+    .about_content {
+        margin-top: 10px;
+    }
+    #portfolio {
+        height: auto;
+    }
+    .portfolio_container {
+        height: auto;
+    }
+    .portfolios {
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .port_colum_1 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .port_colum_2 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .portfolios a {
+        width: 260px;
+        height: 500px;
+        display: flex;
+        margin: 3vw 2vw;
+        border-radius: 10px;
+    }
+    .portfolios .port_heading span {
+        font-size: 27px;
+        margin: 6px 0;
+    }
+    .portfolios .port_para p {
+        margin: 20px 0;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .portfolios a .port_img img {
+        width: 170px;
+        height: 170px;
+    }
+    .testimonial {
+        width: 200px;
+        height: 370px;
+        margin: 0 18px;
+    }
+    .testimonial .test_img img {
+        width: 200px;
+        height: 370px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .testimonial .test_para p {
+        font-size: 11px;
+        line-height: 18px;
+        margin-top: 4px;
+    }
+    .banner_logo span {
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .slogan p {
+        font-size: 16px;
+        line-height: 23px;
+        width: 60%;
+    }
+    .cta_btn a {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 3px 17px;
+        border: none;
+        margin: 27px 8px;
+        font-weight: 600;
+        opacity: .9;
+    }
+    .cta_btn a i {
+        font-size: 18px;
+        margin-left: 14px;
+        line-height: 30px;
+    }
+    .contact_info li {
+        font-size: 20px;
+        margin: 30px 0;
+        margin-left: 10px;
+    }
+    .contact_links a {
+        padding: 5px;
+        margin: 0 7px;
+    }
+    .contact_info li i {
+        margin-right: 23px;
+    }
+    #whatsapp {
+        top: 92%;
+        left: 94%;
+    }
+}
+
+@media (max-width: 768px) {
+    .my_location {
+        width: 154px;
+    }
+    .my_location i {
+        font-size: 15px;
+        margin-left: 2px;
+    }
+    .chat span {
+        font-size: 36px;
+        line-height: 120px;
+    }
+    .heading {
+        line-height: 59px;
+        margin: 0 31vw;
+    }
+    .about_left {
+        padding: 1vw 4vw;
+    }
+    .about_left .about_p_1 {
+        border-bottom: 1px solid var(--primary-color);
+        padding-bottom: 30px;
+    }
+    .portfolios a {
+        margin: 4vw 1vw;
+        border-radius: 8px;
+    }
+    .client_container {
+        height: auto;
+    }
+    .testimonials {
+        height: auto;
+        flex-direction: column;
+        padding: 0vw 0;
+        margin: 0px 0;
+    }
+    .testimonial {
+        width: 260px;
+        height: 440px;
+        margin: 5vw 0;
+    }
+    .testimonial .test_img img {
+        width: 260px;
+        height: 440px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .testimonial .test_para p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 4px;
+    }
+    .call_to_action_c {
+        height: 42vh;
+    }
+    #call_to_action .banner {
+        height: 42vh;
+    }
+    .banner_logo span {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .slogan p {
+        font-size: 17px;
+        line-height: 29px;
+        width: 66%;
+    }
+    .cta_btn a {
+        font-size: 16px;
+        line-height: 30px;
+        padding: 3px 6px;
+        border: none;
+        margin: 30px 8px;
+        font-weight: 600;
+    }
+    .cta_btn a i {
+        font-size: 17px;
+        margin-left: 12px;
+        line-height: 33px;
+    }
+    .contact_links a {
+        padding: 4px;
+        margin: 0 5px;
+    }
+    .contact_info li i {
+        margin-right: 21px;
+    }
+    #whatsapp {
+        left: 93%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav .nav_right {
+        margin-right: 9%;
+    }
+    #links .hamburger {
+        left: 93%;
+        top: 5.8;
+    }
+    .my_location {
+        display: none;
+    }
+    .chat span {
+        font-size: 33px;
+        line-height: 78px;
+    }
+    .chat_text_box div {
+        padding: 9px 11px;
+        border: 2px solid #fff;
+    }
+    .chat_text_box div p {
+        font-size: 13px;
+    }
+    .about_right {
+        display: none;
+    }
+    .about_left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px;
+        border-right: 0px solid var(--primary-color);
+        text-align: center;
+        margin-top: 22px;
+    }
+    .about_content p {
+        font-size: 17px;
+        line-height: 26px;
+        margin: 7px 18px;
+    }
+    .white {
+        font-size: 60px;
+    }
+    .slide_case_first a img {
+        width: 250px;
+    }
+    .slide_case_second a img {
+        width: 250px;
+    }
+    .slide_case_first {
+        padding: 4vw 0px;
+    }
+    .slide_case_second {
+        padding: 4vw 0px;
+    }
+    .portfolios a {
+        margin: 0px 30px;
+    }
+    .client_container {
+        height: auto;
+    }
+    .testimonials {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 0 6vw;
+    }
+    .testimonial {
+        width: 300px;
+        height: 450px;
+        margin: 20px 0px;
+    }
+    .testimonial .test_img img {
+        width: 300px;
+        height: 450px;
+    }
+    .testimonial .test_para p {
+        font-size: 15px;
+        line-height: 24px;
+        margin-top: 6px;
+    }
+    .testimonial .test_name_pro .test_name span {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .testimonial .test_name_pro .test_profession span {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .banner_logo span {
+        font-size: 27px;
+        line-height: 36px;
+    }
+    .slogan p {
+        font-size: 15px;
+        line-height: 20px;
+        width: 72%;
+    }
+    .cta_btn a {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .cta_btn a i {
+        font-size: 16px;
+        margin-left: 13px;
+        line-height: 29px;
+    }
+    .contact_content {
+        width: 60%;
+    }
+    .contact_information {
+        width: 40%;
+    }
+    .contact_content span {
+        font-size: 25px;
+        line-height: 26px;
+        width: 80%;
+        margin-top: -66px;
+    }
+    .contact_content .form-group label {
+        font-size: 15px;
+    }
+    .contact_info li {
+        font-size: 17px;
+        margin: 30px 0;
+        margin-left: 6px;
+    }
+    .contact_info li i {
+        margin-right: 14px;
+    }
+    .contact_links a i {
+        font-size: 13px;
+    }
+    #whatsapp {
+        top: 89%;
+        left: 91%;
+    }
+}
+
+@media (max-width: 414PX) {
+    nav {
+        height: 59px;
+    }
+    nav .nav_right {
+        margin-right: 13%;
+    }
+    #logo img {
+        width: 33px;
+    }
+    #links span {
+        font-size: 17px;
+        margin: 0px 15px;
+    }
+    #links a i {
+        font-size: 17px;
+        margin: 0 5px;
+    }
+    #links .hamburger {
+        font-size: 17px;
+        left: 92%;
+        top: 4.4%;
+    }
+    .hero_content span {
+        font-size: 37px;
+        line-height: 42px;
+    }
+    .hero_content p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .scroller p {
+        font-size: 29px;
+        line-height: 150px;
+    }
+    .btn a {
+        font-size: 15px;
+        padding: 3px 8px;
+    }
+    .chat span {
+        width: 49%;
+        font-size: 29px;
+        line-height: 67px;
+    }
+    .heading {
+        font-size: 55px;
+        line-height: 45PX;
+        margin: 0 25VW;
+    }
+    .about_left {
+        margin-top: 0px;
+    }
+    .about_content p {
+        font-size: 15px;
+        line-height: 23px;
+        margin: 7px 18px;
+    }
+    .about_left .about_p_1 {
+        padding-bottom: 15px;
+    }
+    .about_left .about_p_2 {
+        padding-top: 0px;
+    }
+    #Case_Studies {
+        display: none;
+    }
+    .portfolios {
+        padding: 0px 17vw;
+    }
+    .port_colum_1 {
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    .port_colum_2 {
+        flex-direction: column;
+    }
+    .portfolios a {
+        margin: 20PX 0px;
+    }
+}
