@@ -828,7 +828,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 15%",
+    start: "top 10%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing color to white");
         gsap.to(nav_span, { color: "#fff", duration: 0.3 });
@@ -841,7 +841,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 15%",
+    start: "top 10%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing color to white");
         gsap.to(nav_links, { color: "#fff", duration: 0.3 });
@@ -854,7 +854,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 15%",
+    start: "top 10%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing to white logo");
         gsap.to(".dark_logo", { opacity: 0, duration: 0.3 });
