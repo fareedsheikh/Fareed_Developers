@@ -21,7 +21,7 @@ gsap.to(".dot", {
 });
 
 // JavaScript to handle the preloader
-window.addEventListener("load", function() {
+window.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById("preloader");
     gsap.to(preloader, {
         opacity: 0,
@@ -31,6 +31,7 @@ window.addEventListener("load", function() {
         }
     });
 });
+
 
 // <!-- -------------------------------------------------- Gsap_Basic ---------------------------------------------- -->
 const lenis = new Lenis()
@@ -50,25 +51,7 @@ requestAnimationFrame(raf)
 
 // <!-- -------------------------------------------------- Gsap_Basic_Animation_For_Scrolling ---------------------------------------------- -->
 
-let lastScroll = 0;
-const scrollHandler = () => {
-    const currentScroll = window.scrollY;
-    if (Math.abs(currentScroll - lastScroll) > 50) {
-        lastScroll = currentScroll;
-    }
-};
 
-window.addEventListener('scroll', scrollHandler);
-
-document.addEventListener("DOMContentLoaded", function() {
-
-
-    if (hero) {
-        setTimeout(() => {
-            hero.classList.add("transitioned");
-        }, 100);
-    }
-});
 
 // <!-- -------------------------------------------------- Gsap_Basic_Animation_For_Scrolling_End ---------------------------------------------- -->
 
@@ -113,62 +96,6 @@ window.onload = function() {
     }
 };
 
-window.onload = function() {
-    const span = document.querySelector('.hero_content span');
-    const p = document.querySelector('.hero_content p');
-    const scroller = document.querySelector('.scroller');
-    const scrollerText = document.querySelector('.scroller p');
-    const buttons = document.querySelectorAll('.btn a'); // Select all button links
-
-    // Check if the page was reloaded
-    if (performance.navigation.type === 1) {
-        // Create a GSAP timeline for the hero content and scroller
-        const tl = gsap.timeline()
-            .fromTo(span, { filter: 'blur(5px)', color: 'var(--transition-color)', opacity: 0 }, { filter: 'blur(0px)', color: 'var(--primary-color)', opacity: 1, duration: 1.5 })
-            .fromTo(p, { filter: 'blur(5px)', color: 'var(--transition-color)', opacity: 0 }, { filter: 'blur(0px)', color: 'var(--secondary-color)', opacity: 1, duration: 1.5 }, "-=1.5")
-            .fromTo(scroller, { opacity: 0 }, { opacity: 1, duration: .7 })
-            .fromTo(scrollerText, { xPercent: 100 }, { xPercent: 0, duration: .5, ease: "power1.inOut" });
-
-        // Add animations for buttons
-        buttons.forEach((button, index) => {
-            tl.fromTo(button, { opacity: 0, y: -50, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: .5, ease: "bounce.out" }, `-=${0.5 * index}`);
-        });
-    }
-};
-
-
-
-
-window.onload = function() {
-    const chatBox = document.getElementById('chat_box');
-    const aboutUs = document.getElementById('about_us');
-    const scrollLine = document.querySelector('.scroll-line');
-
-    // Calculate the scroll positions
-    const chatBoxTop = chatBox.offsetTop;
-    const chatBoxHeight = chatBox.clientHeight;
-    const aboutUsTop = aboutUs.offsetTop;
-
-    // Calculate the start and end positions for the line animation
-    const startScroll = chatBoxTop + chatBoxHeight / 2; // Start animation when scrolling past the middle of #chat_box
-    const endScroll = aboutUsTop; // End animation when reaching #about_us
-
-    // Create the GSAP animation timeline
-    const tl = gsap.timeline({ paused: true })
-        .to(scrollLine, { width: '100%', duration: 1, ease: 'power2.inOut' });
-
-    // Scroll event listener
-    window.addEventListener('scroll', function() {
-        const scrollPosition = window.scrollY + window.innerHeight;
-
-        // Check if scroll position is within the range of #chat_box and #about_us
-        if (scrollPosition > startScroll && scrollPosition < endScroll) {
-            tl.play(); // Play animation if within range
-        } else {
-            tl.reverse(); // Reverse animation if outside range
-        }
-    });
-};
 
 
 
@@ -316,60 +243,63 @@ gsap.to(".chat_text5", {
 
 // <!-- -------------------------------------------------- Change_Hamburger_Color_When_Scroll_to_Chat_Box_To_White ---------------------------------------------- -->
 
-ScrollTrigger.create({
-    trigger: "#chat_box",
-    start: "top 15%",
-    onEnter: () => {
-        console.log("ScrollTrigger activated: changing color to white");
-        gsap.to(hamburger, { color: "#FFFFFF", duration: 0.3 });
-    },
-    onLeaveBack: () => {
-        console.log("ScrollTrigger deactivated: reverting color");
-        gsap.to(hamburger, { color: "#000", duration: 0.3 });
-    }
-});
+if (document.body.classList.contains('home-page')) {
+    ScrollTrigger.create({
+        trigger: "#chat_box",
+        start: "top 15%",
+        onEnter: () => {
+            console.log("ScrollTrigger activated: changing color to white");
+            gsap.to(hamburger, { color: "#FFFFFF", duration: 0.3 });
+        },
+        onLeaveBack: () => {
+            console.log("ScrollTrigger deactivated: reverting color");
+            gsap.to(hamburger, { color: "#000", duration: 0.3 });
+        }
+    });
 
-ScrollTrigger.create({
-    trigger: "#chat_box",
-    start: "top 15%",
-    onEnter: () => {
-        console.log("ScrollTrigger activated: changing color to white");
-        gsap.to(nav_span, { color: "#FFFFFF", duration: 0.3 });
-    },
-    onLeaveBack: () => {
-        console.log("ScrollTrigger deactivated: reverting color");
-        gsap.to(nav_span, { color: "#000000", duration: 0.3 });
-    }
-});
+    ScrollTrigger.create({
+        trigger: "#chat_box",
+        start: "top 15%",
+        onEnter: () => {
+            console.log("ScrollTrigger activated: changing color to white");
+            gsap.to(nav_span, { color: "#FFFFFF", duration: 0.3 });
+        },
+        onLeaveBack: () => {
+            console.log("ScrollTrigger deactivated: reverting color");
+            gsap.to(nav_span, { color: "#000000", duration: 0.3 });
+        }
+    });
 
-ScrollTrigger.create({
-    trigger: "#chat_box",
-    start: "top 15%",
-    onEnter: () => {
-        console.log("ScrollTrigger activated: changing color to white");
-        gsap.to(nav_links, { color: "#FFFFFF", duration: 0.3 });
-    },
-    onLeaveBack: () => {
-        console.log("ScrollTrigger deactivated: reverting color");
-        gsap.to(nav_links, { color: "#000000", duration: 0.3 });
-    }
-});
-gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.create({
+        trigger: "#chat_box",
+        start: "top 15%",
+        onEnter: () => {
+            console.log("ScrollTrigger activated: changing color to white");
+            gsap.to(nav_links, { color: "#FFFFFF", duration: 0.3 });
+        },
+        onLeaveBack: () => {
+            console.log("ScrollTrigger deactivated: reverting color");
+            gsap.to(nav_links, { color: "#000000", duration: 0.3 });
+        }
+    });
 
-ScrollTrigger.create({
-    trigger: "#chat_box",
-    start: "top 15%",
-    onEnter: () => {
-        console.log("ScrollTrigger activated: changing to white logo");
-        gsap.to(".dark_logo", { opacity: 0, duration: 0.3 });
-        gsap.to(".white_logo", { opacity: 1, duration: 0.3 });
-    },
-    onLeaveBack: () => {
-        console.log("ScrollTrigger deactivated: reverting to dark logo");
-        gsap.to(".dark_logo", { opacity: 1, duration: 0.3 });
-        gsap.to(".white_logo", { opacity: 0, duration: 0.3 });
-    }
-});
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+        trigger: "#chat_box",
+        start: "top 15%",
+        onEnter: () => {
+            console.log("ScrollTrigger activated: changing to white logo");
+            gsap.to(".dark_logo", { opacity: 0, duration: 0.3 });
+            gsap.to(".white_logo", { opacity: 1, duration: 0.3 });
+        },
+        onLeaveBack: () => {
+            console.log("ScrollTrigger deactivated: reverting to dark logo");
+            gsap.to(".dark_logo", { opacity: 1, duration: 0.3 });
+            gsap.to(".white_logo", { opacity: 0, duration: 0.3 });
+        }
+    });
+}
 
 // <!-- -------------------------------------------------- Change_Hamburger_Color_When_Scroll_to_Chat_Box_To_White_End ---------------------------------------------- -->
 
@@ -815,7 +745,7 @@ gsap.to("#contact", {
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 10%",
+    start: "top 7%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing color to black");
         gsap.to(hamburger, { color: "#fff", duration: 0.3 });
@@ -828,7 +758,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 10%",
+    start: "top 7%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing color to white");
         gsap.to(nav_span, { color: "#fff", duration: 0.3 });
@@ -841,7 +771,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 10%",
+    start: "top 7%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing color to white");
         gsap.to(nav_links, { color: "#fff", duration: 0.3 });
@@ -854,7 +784,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
     trigger: "#contact",
-    start: "top 10%",
+    start: "top 7%",
     onEnter: () => {
         console.log("ScrollTrigger activated: changing to white logo");
         gsap.to(".dark_logo", { opacity: 0, duration: 0.3 });
