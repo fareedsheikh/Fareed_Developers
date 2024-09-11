@@ -121,6 +121,7 @@ nav .nav_right {
     font-family: "Mulish", sans-serif;
     font-size: 40px;
     margin: 0 40px;
+    color: var(--primary-color);
 }
 
 #links a {
@@ -167,18 +168,18 @@ nav .nav_right {
     opacity: 1;
 }
 
-#hero_bg {
+.hero_bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-#hero_bg .overlay {
+.hero_bg .overlay {
     background-color: #0000001a;
 }
 
-#hero_bg .transitioned {
+.hero_bg .transitioned {
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -187,7 +188,7 @@ nav .nav_right {
     background-color: #0000000a;
 }
 
-#hero_bg video {
+.hero_bg video {
     height: 100vh;
     color: var(--primary-color);
     width: 100%;
@@ -205,6 +206,8 @@ nav .nav_right {
     align-self: center;
     padding: 0 6vw;
     position: relative;
+    top: 0;
+    left: 0;
     overflow: hidden;
     text-align: center;
 }
@@ -331,10 +334,10 @@ nav .nav_right {
 }
 
 .chat_text_box div {
-    padding: 18px 50px;
+    padding: 30px 50px;
     margin: 12px 0;
     border-radius: 10px;
-    border: 5px solid var(--white-color);
+    border: 5px solid #77b281;
     background: #0000007a;
     font-family: "Mulish", sans-serif;
 }
@@ -435,6 +438,11 @@ nav .nav_right {
     flex-direction: column;
     padding: 0 70px;
     border-right: 3px solid var(--primary-color);
+}
+
+.about_content p span {
+    color: #7edf8e;
+    font-weight: 600;
 }
 
 .about_right {
@@ -562,7 +570,7 @@ nav .nav_right {
     border-radius: 10px;
     border-top: 8px solid var(--secondary-color);
     transition: .8s all;
-    border-bottom: 3px solid #00000065;
+    border-bottom: 3px solid #77b281;
     border-right: 3px solid #00000028;
     border-left: 3px solid #00000028;
 }
@@ -668,7 +676,7 @@ nav .nav_right {
 .testimonial .test_name_pro {
     position: absolute;
     z-index: 1;
-    top: 88%;
+    top: 90%;
     left: 30%;
     text-align: center;
     border-bottom: 2px solid var(--white-color);
@@ -955,12 +963,13 @@ nav .nav_right {
     color: var(--white-color);
     font-size: 35px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: 0.3s ease, color 0.3s ease;
 }
 
 .contact_content button:hover {
-    background-color: var(--secondary-color);
-    color: #000;
+    box-shadow: inset 1300px 0px 0px 0px var(--secondary-color);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
 }
 
 .contact_content .form-group input:focus~label,
@@ -974,7 +983,7 @@ nav .nav_right {
 
 #whatsapp {
     position: fixed;
-    top: 90%;
+    top: 92%;
     left: 96%;
     display: none;
 }
@@ -993,12 +1002,12 @@ nav .nav_right {
 .side_menu {
     position: fixed;
     top: 0%;
-    left: 55%;
+    left: 65%;
     right: -8%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #0099ff;
+    background: #77b281;
     z-index: 999;
     overflow: hidden;
     display: none;
@@ -1034,8 +1043,8 @@ nav .nav_right {
     cursor: pointer;
     font-size: 55px;
     position: fixed;
-    top: 5.5%;
-    left: 75%;
+    top: 4%;
+    left: 72%;
 }
 
 .side_menu_colomn {
@@ -1047,8 +1056,9 @@ nav .nav_right {
 }
 
 .side_menu_colomn a {
-    font-size: 70px;
-    margin-top: 80px;
+    font-size: 60px;
+    font-family: "Mulish", sans-serif;
+    margin-top: 100px;
     color: var(--white-color);
 }
 
@@ -1081,6 +1091,49 @@ nav .nav_right {
     background-color: var(--white-color);
     border-radius: 50%;
     transform: translateY(-40px);
+}
+
+.hero_services_content p {
+    line-height: 60px;
+    padding: 0 12vw;
+}
+
+.services_container {
+    height: 60vh;
+}
+
+.services_hero_bg .transitioned {
+    height: 60vh;
+}
+
+.services_hero_bg video {
+    height: 60vh;
+}
+
+.hero_services_content {
+    height: 60vh;
+    padding: 0 0vw;
+}
+
+.services_heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+    color: #000000;
+}
+
+.portfolio_container {
+    height: auto;
+}
+
+.portfolio_container p {
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    padding: 1vw 8vw;
+    color: var(--secondary-color);
+    font-family: "Mulish", sans-serif;
 }
 
 @media (max-width: 1920px) {
@@ -1131,6 +1184,12 @@ nav .nav_right {
     }
     #links .hamburger {
         font-size: 32px;
+    }
+    .hero_services_content p {
+        line-height: 45px;
+    }
+    .chat_text_box div {
+        padding: 26px 34px;
     }
     .chat_text_box div p {
         font-size: 30px;
@@ -1209,15 +1268,15 @@ nav .nav_right {
         padding-right: 33px;
     }
     .testimonial .test_name_pro {
-        top: 89%;
+        top: 91%;
     }
     .testimonial .test_name_pro .test_name span {
-        font-size: 26px;
-        line-height: 30px;
+        font-size: 24px;
+        line-height: 34px;
     }
     .testimonial .test_name_pro .test_profession span {
-        font-size: 23px;
-        line-height: 30px;
+        font-size: 21px;
+        line-height: 18px;
     }
     .testimonial .test_para p {
         font-size: 22px;
@@ -1291,6 +1350,31 @@ nav .nav_right {
     .contact_container {
         height: 90vh;
     }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 60px;
+    }
+    .side_menu_row span {
+        font-size: 32px;
+        margin: 0 40px;
+    }
+    .side_menu_row a i {
+        font-size: 32px;
+        margin: 0 20px;
+    }
+    .side_menu_row .close {
+        font-size: 35px;
+        top: 6%;
+        left: 73%;
+    }
+    .side_menu_colomn a {
+        font-size: 40px;
+        margin-top: 80px;
+    }
+    .portfolio_container p {
+        font-size: 30px;
+        line-height: 50px;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -1347,6 +1431,12 @@ nav .nav_right {
     .scroller p {
         font-size: 50px;
         line-height: 208px;
+    }
+    .hero_services_content p {
+        line-height: 35px;
+    }
+    .chat_text_box div {
+        padding: 22px 30px;
     }
     .chat_text_box div p {
         font-size: 20px;
@@ -1432,6 +1522,9 @@ nav .nav_right {
         width: 330px;
         height: 500px;
     }
+    .testimonial .test_name_pro {
+        top: 89%;
+    }
     .testimonial .test_name_pro .test_name span {
         font-size: 20px;
         line-height: 25px;
@@ -1512,6 +1605,33 @@ nav .nav_right {
     #whatsapp a i {
         font-size: 60px;
     }
+    .contact_container {
+        height: 90vh;
+    }
+    .side_menu_colomn {
+        margin-left: 50px;
+    }
+    .side_menu_row span {
+        font-size: 26px;
+        margin: 0 32px;
+    }
+    .side_menu_row a i {
+        font-size: 26px;
+        margin: 0 20px;
+    }
+    .side_menu_row .close {
+        font-size: 32px;
+        top: 7.5%;
+        left: 73%;
+    }
+    .side_menu_colomn a {
+        font-size: 35px;
+        margin-top: 70px;
+    }
+    .portfolio_container p {
+        font-size: 27px;
+        line-height: 40px;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -1528,6 +1648,9 @@ nav .nav_right {
     .scroller p {
         font-size: 42px;
         line-height: 194px;
+    }
+    .hero_services_content p {
+        line-height: 30px;
     }
     .chat span {
         font-size: 40px;
@@ -1615,6 +1738,35 @@ nav .nav_right {
         top: 91%;
         left: 96%;
     }
+    .side_menu_row {
+        height: 100px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 40px;
+    }
+    .side_menu_row span {
+        font-size: 23px;
+        margin: 0 28px;
+    }
+    .side_menu_row a i {
+        font-size: 23px;
+        margin: 0 20px;
+    }
+    .side_menu_row .close {
+        font-size: 32px;
+        top: 5%;
+        left: 73%;
+    }
+    .side_menu_colomn a {
+        font-size: 28px;
+        margin-top: 70px;
+    }
+    .portfolio_container p {
+        font-size: 24px;
+        line-height: 30px;
+        padding: 1vw 12vw;
+    }
 }
 
 @media (max-width: 1366px) {
@@ -1640,12 +1792,15 @@ nav .nav_right {
         line-height: 63px;
     }
     .hero_content p {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 27px;
     }
     .scroller p {
         font-size: 47px;
         line-height: 176px;
+    }
+    .hero_services_content p {
+        line-height: 26px;
     }
     .btn {
         margin-top: -18px;
@@ -1674,8 +1829,8 @@ nav .nav_right {
         -webkit-text-stroke: .6px #ffffff65;
     }
     .chat_text_box div {
-        padding: 12px 30px;
-        border: 2px solid #fff;
+        padding: 18px 28px;
+        border: 2px solid #77b281;
     }
     .chat_text_box div p {
         font-size: 15px;
@@ -1745,9 +1900,41 @@ nav .nav_right {
     .contact_info_content {
         height: 75vh;
     }
+    .side_menu_row {
+        height: 100px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 30px;
+    }
+    .side_menu_row span {
+        font-size: 21px;
+        margin: 0 26px;
+    }
+    .side_menu_row a i {
+        font-size: 21px;
+        margin: 0 20px;
+    }
+    .side_menu_row .close {
+        font-size: 28px;
+        top: 5.6%;
+        left: 73%;
+    }
+    .side_menu_colomn a {
+        font-size: 28px;
+        margin-top: 65px;
+    }
+    .portfolio_container p {
+        font-size: 20px;
+        line-height: 26px;
+        padding: 1vw 13vw;
+    }
 }
 
 @media (max-width: 1112px) {
+    .hero_services_content p {
+        line-height: 25px;
+    }
     .chat span {
         font-size: 40px;
         line-height: 120px;
@@ -1813,6 +2000,9 @@ nav .nav_right {
         width: 240px;
         height: 430px;
     }
+    .testimonial .test_name_pro {
+        top: 92%;
+    }
     .testimonial .test_name_pro .test_name span {
         font-size: 14px;
         line-height: 15px;
@@ -1868,7 +2058,7 @@ nav .nav_right {
         font-size: 11px;
     }
     .contact_content button {
-        padding: 3px;
+        padding: 5px;
         font-size: 15px;
     }
     .contact_content span {
@@ -1889,6 +2079,35 @@ nav .nav_right {
     }
     .contact_container {
         height: 80vh;
+    }
+    .side_menu_row {
+        height: 80px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 30px;
+    }
+    .side_menu_row span {
+        font-size: 18px;
+        margin: 0 19px;
+    }
+    .side_menu_row a i {
+        font-size: 18px;
+        margin: 0 16px;
+    }
+    .side_menu_row .close {
+        font-size: 25px;
+        top: 4.1%;
+        left: 73%;
+    }
+    .side_menu_colomn a {
+        font-size: 26px;
+        margin-top: 65px;
+    }
+    .portfolio_container p {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 1vw 15vw;
     }
 }
 
@@ -1911,6 +2130,9 @@ nav .nav_right {
         font-size: 18px;
         line-height: 21px;
     }
+    .hero_services_content p {
+        line-height: 22px;
+    }
     .btn {
         margin-top: -29px;
         display: flex;
@@ -1923,6 +2145,10 @@ nav .nav_right {
     .my_location {
         width: 162px;
         height: 36px;
+    }
+    .chat_text_box div {
+        padding: 16px 25px;
+        border: 1px solid #77b281;
     }
     .chat span {
         width: 40%;
@@ -2009,6 +2235,9 @@ nav .nav_right {
         height: 370px;
         margin: 0 18px;
     }
+    .testimonial .test_name_pro {
+        top: 90%;
+    }
     .testimonial .test_img img {
         width: 200px;
         height: 370px;
@@ -2064,6 +2293,33 @@ nav .nav_right {
     #whatsapp {
         top: 92%;
         left: 94%;
+    }
+    .side_menu {
+        left: 57%;
+    }
+    .side_menu_row {
+        height: 80px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 30px;
+    }
+    .side_menu_row span {
+        font-size: 17px;
+        margin: 0 16px;
+    }
+    .side_menu_row a i {
+        font-size: 17px;
+        margin: 0 13px;
+    }
+    .side_menu_row .close {
+        font-size: 25px;
+        top: 4.2%;
+        left: 75%;
+    }
+    .side_menu_colomn a {
+        font-size: 26px;
+        margin-top: 65px;
     }
 }
 
@@ -2169,6 +2425,38 @@ nav .nav_right {
     #whatsapp {
         left: 93%;
     }
+    .side_menu {
+        left: 57%;
+    }
+    .side_menu_row {
+        height: 80px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 30px;
+    }
+    .side_menu_row span {
+        font-size: 16px;
+        margin: 0 16px;
+    }
+    .side_menu_row a i {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    .side_menu_row .close {
+        font-size: 23px;
+        top: 4.2%;
+        left: 75%;
+    }
+    .side_menu_colomn a {
+        font-size: 24px;
+        margin-top: 60px;
+    }
+    .portfolio_container p {
+        font-size: 15px;
+        line-height: 22px;
+        padding: 1vw 15vw;
+    }
 }
 
 @media (max-width: 600px) {
@@ -2184,7 +2472,7 @@ nav .nav_right {
     }
     .chat span {
         font-size: 33px;
-        line-height: 78px;
+        line-height: 88px;
     }
     .chat_text_box div {
         padding: 9px 11px;
@@ -2196,7 +2484,6 @@ nav .nav_right {
     .heading {
         font-size: 60px;
         line-height: 50px;
-        margin: 0 30vw;
     }
     .about_right {
         display: none;
@@ -2305,6 +2592,33 @@ nav .nav_right {
         top: 91%;
         left: 92%;
     }
+    .side_menu {
+        left: 42%;
+    }
+    .side_menu_row {
+        height: 80px;
+    }
+    .side_menu_colomn {
+        height: 70vh;
+        margin-left: 30px;
+    }
+    .side_menu_row span {
+        font-size: 16px;
+        margin: 0 16px;
+    }
+    .side_menu_row a i {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    .side_menu_row .close {
+        font-size: 23px;
+        top: 4.2%;
+        left: 75%;
+    }
+    .side_menu_colomn a {
+        font-size: 24px;
+        margin-top: 60px;
+    }
 }
 
 @media (max-width: 414PX) {
@@ -2409,6 +2723,34 @@ nav .nav_right {
         top: 92%;
         left: 89%;
     }
+    .side_menu {
+        left: 0%;
+    }
+    .side_menu_wrap {
+        left: 0%;
+        height: 98vh;
+    }
+    .side_menu_colomn {
+        height: 65vh;
+        align-items: center;
+        margin-left: -35px;
+    }
+    .side_menu_row {
+        width: 75%;
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+    .side_menu_row .close {
+        font-size: 23px;
+        top: 4.2%;
+        left: 84.5%;
+    }
+    .side_menu_row span {
+        font-size: 16px;
+        margin: 0 40px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -2427,6 +2769,11 @@ nav .nav_right {
     #whatsapp {
         top: 92%;
         left: 88%;
+    }
+    .portfolio_container p {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 1vw 12vw;
     }
 }
 
@@ -2468,12 +2815,15 @@ nav .nav_right {
         font-size: 30px;
         line-height: 71px;
     }
+    .chat_text_box div p {
+        font-size: 12px;
+    }
     .heading {
         font-size: 41px;
     }
     .about_content p {
         font-size: 15px;
-        line-height: 26px;
+        line-height: 28px;
         margin: 0px 18px;
     }
     .about_content {
@@ -2497,5 +2847,8 @@ nav .nav_right {
     #whatsapp {
         top: 92%;
         left: 86%;
+    }
+    .side_menu_row {
+        width: 79%;
     }
 }
