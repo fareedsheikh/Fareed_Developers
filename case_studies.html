@@ -8,65 +8,240 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/Assest/Fareed Developers Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
+
+    <!-- -------------------------------------------------- Main_div -------------------------------------------------- -->
+
     <main>
-        <main>
-            <div id="hero">
-                <div class="container services_container">
-                    <nav id="navbar">
-                        <div class="nav_left">
-                            <div id="logo">
-                                <a href="/index.html"><img src="/Assest/Fareed Developers Logo.png" alt="Fareed Developers"></a>
-                            </div>
+
+        <!-- -------------------------------------------------- Hero_Section ---------------------------------------------- -->
+
+        <div id="hero">
+            <div class="container services_container">
+
+                <!-- -------------------------------------------------- Navbar ---------------------------------------------- -->
+
+                <nav id="navbar">
+                    <div class="nav_left">
+                        <div id="logo">
+                            <a href="/index.html"><img class="dark_logo" src="/Assest/Fareed Developers Logo.png" alt="Fareed Developers"></a>
+                            <a href="/index.html"><img class="white_logo" src="/Assest/Fareed Developers white Logo.png" alt="Fareed Developers"></a>
                         </div>
-                        <div class="nav_right">
-                            <div id="links">
-                                <span>+92 326-692-9737</span>
-                                <a href="#"><i class="fa-solid fa-envelope" style="color: #000000;"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-                                <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #000000;"></i></a>
-                                <i class="hamburger fa-solid fa-bars" style="color: #000000;"></i>
-                            </div>
-                            <div class="side_menu">
-                                <div class="side_menu_wrap">
-                                    <div class="side_menu_row">
-                                        <span>+92 326-692-9737</span>
-                                        <a href="#"><i class="fa-solid fa-envelope" style="color: #000000;"></i></a>
-                                        <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
-                                        <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #000000;"></i></a>
-                                        <i class="close fa-solid fa-xmark" style="color: #ffffff;"></i>
-                                    </div>
-                                    <div class="side_menu_colomn">
-                                        <a href="/index.html">Home</a>
-                                        <a href="/about.html">About</a>
-                                        <a href="/services.html">Services</a>
-                                        <a href="/case_studies.html">Case Study</a>
-                                        <a href="/contact.html">Contact</a>
-                                    </div>
+                    </div>
+                    <div class="nav_right">
+                        <div id="links">
+                            <span>+92 328 5981932</span>
+                            <a href="mailto:fareedshinkai@gmail.com?subject=Subject%20Here&body=Your%20Message%20Here"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagra"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <i class="hamburger fa-solid fa-bars"></i>
+                        </div>
+
+                        <!-- -------------------------------------------------- Hamburger_Menu ---------------------------------------------- -->
+
+                        <div class="side_menu">
+                            <div class="side_menu_wrap">
+                                <div class="side_menu_row">
+                                    <span>+92 328 5981932</span>
+                                    <a href="mailto:fareedshinkai@gmail.com?subject=Subject%20Here&body=Your%20Message%20Here"><i class="fa-solid fa-envelope"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram" style="color: #000000;"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in" style="color: #000000;"></i></a>
+                                    <i class="close fa-solid fa-xmark" style="color: #ffffff;"></i>
+                                </div>
+                                <div class="side_menu_colomn">
+                                    <a href="/index.html">Home</a>
+                                    <a href="/about.html">About</a>
+                                    <a href="/services.html">Services</a>
+                                    <a href="/case_studies.html">Case Study</a>
+                                    <a href="/contact.html">Contact</a>
                                 </div>
                             </div>
                         </div>
-                    </nav>
-                    <div id="s_bg">
-                        <video loop muted autoplay src="/Assest/Hero Background.mp4"></video>
-                        <div class="overlay"></div>
-                        <div class="overlay transitioned"></div>
+
                     </div>
-                    <div class="hero_content services_hero_content">
-                        <span>#Services</span>
-                        <p>Solutions for a Smarter Planet</p>
-                        <!-- <div class="btn">
-                            <a href="#">About Us</a>
+                </nav>
+
+                <!-- -------------------------------------------------- Video_Background ---------------------------------------------- -->
+
+                <div class="hero_bg services_hero_bg">
+                    <video loop muted autoplay src="/Assest/Hero Background.mp4"></video>
+                    <div class="overlay"></div>
+                    <div class="overlay transitioned"></div>
+                </div>
+
+                <!-- -------------------------------------------------- Hero_Section_Content ---------------------------------------------- -->
+
+                <div class="hero_content hero_services_content">
+                    <div class="hero_content hero_services_content">
+                        <span>#CaseStudies</span>
+                        <p>Real Results, Proven Success – Dive into Our Case Studies to See <br>How We’ve Transformed Ideas into Impactful Digital Solutions!</p>
+                        <div class="btn">
+                            <a href="/about.html">About Us</a>
                             <a href="/services.html">Services</a>
-                        </div> -->
+                        </div>
+
+                        <!-- -------------------------------------------------- Auto_Scroller ---------------------------------------------- -->
+
+                        <!-- -------------------------------------------------- Location ---------------------------------------------- -->
+
+                        <div id="location">
+                            <div class="my_location">
+                                <span>Lahore, Pakistan</span>
+                                <i class="fa-sharp fa-solid fa-globe fa-spin-pulse"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="scrollTop float-right">
-                <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
+
+
+            <div id="chat_box">
+                <div class="container">
+                    <div class="chat">
+                        <span class="chat_span"> "The company in question is a startup, currently in its early stages of development."</span>
+                    </div>
+                    <div class="chat_text_box">
+                        <div class="chat_text1">
+                            <p>Can you make a resturent website?</p>
+                        </div>
+                        <div class="chat_text2">
+                            <p>where you located in Lahore?</p>
+                        </div>
+                        <div class="chat_text3">
+                            <p>Can you re_desing my website?</p>
+                        </div>
+                        <div class="chat_text4">
+                            <p>Do you accept Essypaisa/JaazCash?</p>
+                        </div>
+                        <div class="chat_text5">
+                            <p>How many emploee work for you?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+
+            <div id="Case_Studies">
+                <div class="container">
+                    <div class="case_content">
+                        <div class="case_links">
+                            <div class="slide_case_first">
+                                <a href="#"><img src="/Assest/1.png" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/2.png" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/3.jpg" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/4.png" class="lazy-load" alt=""></a>
+                            </div>
+                            <div class="slide_case_second">
+                                <a href="#"><img src="/Assest/5.jpg" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/6.jpg" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/7.png" class="lazy-load" alt=""></a>
+                                <a href="#"><img src="/Assest/8.jpg" class="lazy-load" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="call_to_action">
+                <div class="container call_to_action_c">
+                    <div class="banner services_banner">
+                        <div class="baner_video">
+                            <video loop muted autoplay src="/Assest/Hero Background.mp4"></video>
+                        </div>
+                        <div class="banner_logo banner_services_logo">
+                            <span>Crafting a Smarter Web for a Better Tomorrow</span>
+                        </div>
+                        <div class="slogan">
+                            <p>If you’re looking for a web developer who can bring your ideas to life, I’m here to help. Whether you need a stunning website, a dynamic web application, or a complete digital overhaul, I’ve got you covered. Let’s connect and
+                                discuss your project needs.</p>
+                        </div>
+                        <div class="btn cta_btn">
+                            <a href="https://wa.me/923285981932" target="_blank">Get A Free Quote <i class="fa-solid fa-square-arrow-up-right" style="color: #36454F;"></i></a>
+                            <a href="https://wa.me/923285981932" target="_blank">Schedule Free Call <i class="fa-solid fa-square-arrow-up-right" style="color: #36454F;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact">
+                <div class="contact_container container">
+                    <span class="white">Contact</span>
+                    <div class="contact_info_content">
+                        <div class="contact_information">
+                            <div class="contact_info">
+                                <li><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>Pakistan</li>
+                                <li><i class="fa-solid fa-phone" style="color: #ffffff;"></i>+92 328 5981932</li>
+                                <a href="https://wa.me/923285981932" target="_blank">
+                                    <li><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>+92 328 5981932</li>
+                                </a>
+                                <a href="mailto:fareedshinkai@gmail.com?subject=Subject%20Here&body=Your%20Message%20Here">
+                                    <li><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>fareedshinkai@gmail.com</li>
+                                </a>
+                            </div>
+                            <div class="contact_links">
+                                <a href="#"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+                                <a href="#"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                                <a href="https://wa.me/923285981932" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a>
+                                <a href="#"><i class="fa-brands fa-telegram" style="color: #ffffff;"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                            </div>
+                            <p>© ALL OF THE RIGHTS RESERVED 2024</p>
+                        </div>
+                        <div class="contact_content">
+                            <span>We are not Hard to Find, Let's Desing Somthing Spectecular!</span>
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject:</label>
+                                    <input type="text" id="subject" name="subject" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="whatsapp">
+                <a href="https://wa.me/923285981932" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #075E54;"></i></a>
+            </div>
+
+            <!-- -------------------------------------------------- Contact_Section ---------------------------------------------- -->
+
+
+            <!-- -------------------------------------------------- Footer ---------------------------------------------- -->
+
+            <div class="mainCss" id="preloader">
+                <div class="dotsCss">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- -------------------------------------------------- Script_Links ---------------------------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module">import studioFreightlenis from 'https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm'</script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="/about.js"></script>
 </body>
+
+</html>
